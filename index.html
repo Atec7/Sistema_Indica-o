@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Indicação</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" href="img/favicon.ico">
+</head>
+<body>
+    <header>
+        <img src="img/fav.png" alt="Logo AtecSeven" class="logo">
+        <h1 class="footerp">Sistema de Indicação</h1>
+    </header>
+    <section class="form-section">
+        <form id="indicacaoForm">
+            <label for="matricula">Matrícula:</label>
+            <input type="text" id="matricula" name="matricula" required>
+
+            <label for="nomeSoftware">Nome Software Indicator:</label>
+            <input type="text" id="nomeSoftware" name="nomeSoftware" required>
+
+            <label for="gerente">Gerente:</label>
+            <select id="gerente" name="gerente" required>
+                <option value="ARNALDO S. LIMA">ARNALDO S. LIMA</option>
+                <option value="AGLAISIO BARROS">AGLAISIO BARROS</option>
+                <option value="JANDSON SILVA">JANDSON SILVA</option>
+            </select>
+            
+            <label for="indicacao">Indicação:</label>
+            <select id="indicacao" name="indicacao" required>
+                <option value="mensal">Mensal</option>
+                <option value="estatica">Estática</option>
+            </select>
+
+            <label for="nomeCliente">Nome do Cliente:</label>
+            <input type="text" id="nomeCliente" name="nomeCliente" required>
+
+            <label for="emailCliente">E-mail do Cliente:</label>
+            <input type="email" id="emailCliente" name="emailCliente" required>
+
+            <label for="whatsappCliente">WhatsApp do Cliente:</label>
+            <input type="text" id="whatsappCliente" name="whatsappCliente" required>
+
+            <label for="ServicoCliente">Serviço/Software/Negócio do Cliente:</label>
+            <input type="text" id="ServicoCliente" name="ServicoCliente" required>
+
+            <button type="submit">Finalizar Indicação</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; AtecSeven Tecnologia</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

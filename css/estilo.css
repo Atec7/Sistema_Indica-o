@@ -1,0 +1,179 @@
+/* Estilos globais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px; /* Evita que o header seja coberto */
+}
+
+header .logo {
+    height: 80px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: rotateY(-20deg); /* Compensa o efeito do header */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 60px #0ff, 0 0 70px #0ff;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 60px #0ff, 0 0 70px #0ff, 0 0 80px #0ff;
+    }
+}
+
+.form-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    transform: rotateY(20deg);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #040041;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: rgb(4, 4, 148);
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #0a54e9;
+}
+
+footer {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+.esqueci {
+    padding: 20px;
+    text-emphasis: none;
+    text-decoration: none;
+    font-size: 1em;
+    color: #0ff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header .logo {
+        height: 70px;
+        position: relative;
+        border: 5px solid transparent; /* Define a borda */
+        border-radius: 50%; /* Faz a borda ser circular */
+        box-shadow: 0 0 10px rgba(0,0,255,0.5); /* Adiciona um efeito de brilho sutil */
+        animation: borderRotate 3s linear infinite; /* Adiciona a animação */
+    }
+    
+    @keyframes borderRotate {
+        0% {
+            border-top-color: rgba(0, 0, 255, 1);
+        }
+        25% {
+            border-right-color: rgba(0, 0, 255, 1);
+        }
+        50% {
+            border-bottom-color: rgba(0, 0, 255, 1);
+        }
+        75% {
+            border-left-color: rgba(0, 0, 255, 1);
+        }
+        100% {
+            border-top-color: rgba(0, 0, 255, 1);
+        }
+    }
+    
+
+    .form-section {
+        width: 100%;
+        transform: none; /* Remove o efeito 3D em dispositivos móveis */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    header .logo {
+        height: 50px;
+    }
+
+    .form-section {
+        width: 100%;
+        transform: none; /* Remove o efeito 3D em dispositivos móveis */
+    }
+}
